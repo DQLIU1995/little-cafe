@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class User {
-    private Long userId;
+    private Integer  userId;
     private String userName;
     private String firstName;
     private String lastName;
