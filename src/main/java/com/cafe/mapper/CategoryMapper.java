@@ -27,9 +27,10 @@ public interface CategoryMapper {
 
     /* ---------------------------------Insert------------------------*/
 
-    @Insert("insert into category(type, name, status)" +
-            "values(#{type}, #{name}, #{status}")
+    @Insert("insert into category(type, name, status, create_time, update_time) " +
+            "values(#{type}, #{name}, #{status}, #{createTime}, #{updateTime})")
     public void insert(Category category);
+
 
 
     /* ---------------------------------Update------------------------*/

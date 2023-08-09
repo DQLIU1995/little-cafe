@@ -8,10 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 @Slf4j
 @RestController
 @RequestMapping("/dishes")
+@CrossOrigin(origins = "http://localhost:3000")
 public class DishController {
 
     @Autowired
@@ -41,6 +46,14 @@ public class DishController {
         return Result.success(dish);
     }
 
+    @GetMapping("/category/{categoryId}")
+    public Result selectByCategoryId(@PathVariable Integer categoryId){
+        log.info("Get one list by its ID");
+        List<Dish> dishList = dishService.selectByCategoryId(categoryId);
+        return Result.success(dishList);
+    }
+
+
     /*----------------------DeleteMapping-----------------*/
     @DeleteMapping("/{dishId}")
     public Result deleteByOneId(@PathVariable Integer dishId){
@@ -59,7 +72,7 @@ public class DishController {
     /*----------------------------update---------------------*/
 
     @PutMapping
-    public Result updateDish(Dish dish){
+    public Result updateDish(@RequestBody Dish dish){
         log.info("update list");
         dishService.updateDish(dish);
         return Result.success();
@@ -68,10 +81,10 @@ public class DishController {
 
     /*----------------------------insert---------------------*/
     @PostMapping
-    public Result insert(@RequestBody Dish dish){
+    public Result addDish(@RequestBody Dish dish){
         log.info("add another dish: {}", dish);
         dishService.insert(dish);
-        return Result.success();
+        return Result.success(dish);
     }
 
 }

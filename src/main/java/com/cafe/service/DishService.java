@@ -12,6 +12,9 @@ public interface DishService {
 
     Dish selectByOneId(Integer dishId);
 
+    List<Dish> selectByCategoryId(Integer CategoryId);
+
+
     List<Dish> selectByFilter(Integer dishId, String name, Integer categoryId);
 
     void deleteByOneId(Integer dishId);

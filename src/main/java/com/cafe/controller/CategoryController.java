@@ -7,11 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 @Slf4j
 @RestController
 @RequestMapping("categories")
-public class categoryController {
+@CrossOrigin(origins = "http://localhost:3000")
+public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
@@ -41,8 +46,12 @@ public class categoryController {
     /*----------------------------update---------------------*/
 
     @PutMapping
-    public Result updateCategory(Category category){
+    public Result updateCategory(@RequestBody Category category){
         log.info("update list");
+        log.info(String.valueOf(category));
+        log.info(String.valueOf(category.getCategoryId()));
+        log.info(String.valueOf(category.getType()));
+        log.info(String.valueOf(category.getName()));
         categoryService.updateCategory(category);
         return Result.success();
     }
@@ -50,7 +59,7 @@ public class categoryController {
 
     /*----------------------------insert---------------------*/
     @PostMapping
-    public Result insert(@RequestBody Category category){
+    public Result addCategory(@RequestBody Category category){
         log.info("add another category: {}", category);
         categoryService.insert(category);
         return Result.success();

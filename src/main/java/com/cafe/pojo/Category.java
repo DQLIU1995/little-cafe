@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Category {
     private Integer categoryId;
-    private String type;
+    private Integer type;
     private String name;
     private Integer status;
     private LocalDateTime createTime;

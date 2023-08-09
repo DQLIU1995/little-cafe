@@ -33,6 +33,12 @@ public class DishServiceImpl implements DishService {
         return dish;
     }
 
+    @Override
+    public List<Dish> selectByCategoryId(Integer CategoryId) {
+        List<Dish> dishList= dishMapper.selectByCategoryId(CategoryId);
+        return dishList;
+    }
+
     /*----------------------Delete---------------------*/
     @Override
     public void deleteByOneId(Integer dishId){dishMapper.deleteByOneId(dishId);}
@@ -47,7 +53,8 @@ public class DishServiceImpl implements DishService {
     public void insert(Dish dish){
         dish.setCreateTime(LocalDateTime.now());
         dish.setUpdateTime(LocalDateTime.now());
-
+        System.out.println("hi inside insert dish");
+        System.out.println(dish);
         dishMapper.insert(dish);
     };
 

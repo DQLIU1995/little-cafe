@@ -19,6 +19,10 @@ public interface DishMapper {
     @Select("select * from dish where dish_id = #{dishId}")
     Dish selectByOneId(Integer dishId);
 
+    @Select("select * from dish where category_id = #{category_id}")
+    List<Dish>selectByCategoryId(Integer CategoryId);
+
+
     public List<Dish> selectByFilter(Integer dishId, String name, Integer categoryId);
 
     /* ---------------------------------Delete------------------------*/
@@ -31,7 +35,7 @@ public interface DishMapper {
     /* ---------------------------------Insert------------------------*/
 
     @Insert("insert into dish(name, category_id, price, image, description, create_time, update_time)" +
-            "values(#{name}, #{categoryId}, #{price}, #{image}, #{description}, #{createTime}, #{updateTime}")
+            "values(#{name}, #{categoryId}, #{price}, #{image}, #{description}, #{createTime}, #{updateTime})")
     public void insert(Dish dish);
 
 

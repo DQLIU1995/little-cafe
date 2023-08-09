@@ -8,15 +8,13 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
-/*
 @Mapper
 public interface UserMapper {
 
     @Select("select * from user")
-    List<User> list();
+    List<User> getAllUser();
 
     @Select("select * from user where user_id = #{id}")
-    public User getById(Integer userId);
+    User getByUserId(Integer userId);
 
-
-}*/
+}
