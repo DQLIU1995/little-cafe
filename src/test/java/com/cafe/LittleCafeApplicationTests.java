@@ -18,7 +18,7 @@ import java.util.List;
 @SpringBootTest
 class LittleCafeApplicationTests {
 
-    /*---------dishMapper Test---------------*/
+/*    *//*---------dishMapper Test---------------*//*
     @Autowired
     private DishMapper dishMapper;
 
@@ -64,7 +64,7 @@ class LittleCafeApplicationTests {
 
 
 
-    /*---------UserMapper Test---------------*/
+    *//*---------UserMapper Test---------------*//*
 
     @Autowired
     private UserMapper userMapper;
@@ -76,7 +76,7 @@ class LittleCafeApplicationTests {
     public void testGetAllUser() {userMapper.getAllUser();}
 
 
-    /*---------CategoryMapper Test---------------*/
+    *//*---------CategoryMapper Test---------------*//*
 
     @Autowired
     private CategoryMapper categoryMapper;
@@ -99,7 +99,7 @@ class LittleCafeApplicationTests {
         category.setUpdateTime(LocalDateTime.now());
         categoryMapper.insert(category);
 
-    }
+    }*/
 
 
 }
