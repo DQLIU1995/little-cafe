@@ -36,7 +36,7 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 @Slf4j
 @RestController
 @RequestMapping("/dishes")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "${FRONTEND_ENDPOINT}")
 public class DishController {
 
     @Autowired

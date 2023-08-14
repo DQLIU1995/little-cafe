@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Slf4j
 @RestController
 @RequestMapping("categories")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "${FRONTEND_ENDPOINT}")
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;

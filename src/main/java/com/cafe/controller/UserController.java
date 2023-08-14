@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Slf4j
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "${FRONTEND_ENDPOINT}")
 public class UserController {
     @Autowired
     private UserService userService;
