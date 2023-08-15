@@ -24,4 +24,20 @@ spring.servlet.multipart.max-file-size=100MB
 spring.servlet.multipart.max-request-size=100MB
 
 Project Description: 
-- ![image](https://github.com/DQLIU1995/little-cafe/assets/88858740/9a16319f-792c-43b3-b731-c61be77899cf)
+- Main Page
+
+![image](https://github.com/DQLIU1995/little-cafe/assets/88858740/9a16319f-792c-43b3-b731-c61be77899cf)
+
+
+- Manager Login Page
+![image](https://github.com/DQLIU1995/little-cafe/assets/88858740/e5ab99f6-30f2-4446-a152-555bc78422ad)
+
+- Manager Options:
+![image](https://github.com/DQLIU1995/little-cafe/assets/88858740/1e19689f-96f5-480a-bbcc-5fbd1552a7a4)
+
+- Categories Modify
+![image](https://github.com/DQLIU1995/little-cafe/assets/88858740/3f93882d-d90a-471d-8604-5fa6fa0fe828)
+
+- Dish Modify
+![image](https://github.com/DQLIU1995/little-cafe/assets/88858740/e88033b9-0e55-4025-9ac7-85bb1ba105c3)
+
