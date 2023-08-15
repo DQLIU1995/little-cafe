@@ -5,10 +5,11 @@ Datbase:
 
 
 Basic Feature
-- Uer(Shopper) is able to log in, view the menu and put the item in their wish list
-- Manager is able to have all of the access that user has and also manage the menu items
+- All Users are able to see the menu
+- Manager is able to log in and modify the menu or modidy the category
 
 
-Advance Featuer
-- User(Shopper) is able to make a purchase and view their historical orders
-- Manager is ablet to see all of the purchase and financials 
+Set up
+- I use Springboot for this project
+
+
